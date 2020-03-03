@@ -1,4 +1,4 @@
-FROM golang:1.11 as builder
+FROM golang:1.13 as builder
 
 COPY . /work
 WORKDIR /work
@@ -13,4 +13,4 @@ COPY --from=builder /etc/passwd /etc/
 
 USER app
 
-ENTRYPOINT ["/usr/bin/hello"]]
+ENTRYPOINT ["/usr/bin/hello"]
